@@ -5,17 +5,16 @@ $(document).ready(function () {
     let $dialogue = $('.dialogue');
 
     // dialogues 
-    let dialogues = {
-        man: "Man",
-        phrase1: "Hello there"
-    }
+    let dialogues = ['hello', 'how are you', 'good', 'k bye', 'bye'], 
+    counter = 0
     
-    $($nxtBtn).on('click', () => {
-
+    $nxtBtn.on('click', () => {
+        counter = (counter + 1) % dialogues.length;
+                // the modulus (%) operator resets the counter to 0
+        // when it reaches the length of the array
+        $dialogue.html(dialogues[counter]);
     })
-
-
-
+ 
 
 
 
