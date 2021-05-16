@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+.wrapper {
+	margin: 2em 10em;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	.dialogue {
+		text-align: center;
+        background-color: #b6b6b6;
+        margin: 1rem;
+
+		// &::before {
+		// 	content: "hello there ";
+		// 	background-color: #669981;
+		// }
+		// &::after {
+		// 	content: "goodbye there";
+		// 	display: block;
+		// 	background-color: orange;
+		// }
+	}
+	.chat-container {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+
+		& img {
+			width: auto;
+			height: 20em;
+		}
+
+		.persona1 {
+			order: 1;
+		}
+
+		.persona2 {
+			order: 2;
+		}
+	}
+
+	button {
+		order: 3;
+		align-self: flex-end;
+	}
+}
